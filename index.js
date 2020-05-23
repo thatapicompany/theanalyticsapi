@@ -171,8 +171,8 @@ class TheAnalyticsAPI {
 
     const data = {
       batch: messages,
-      timestamp: new Date(),
-      sentAt: new Date()
+      timestamp: new Date().getTime(),
+      sentAt: new Date().getTime()
     }
 
     const done = err => {

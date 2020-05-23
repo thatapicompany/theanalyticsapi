@@ -1,5 +1,5 @@
 
-v1.0.3 / 2020-05-23
+v1.0.4 / 2020-05-23
 ==========================
 
   * Updated optional timestamp sent to be in miliseconds
