@@ -1,6 +1,6 @@
 {
   "name": "@thatapicompany/theanalyticsapi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The hassle-free way to integrate analytics into any Node.js application",
   "license": "MIT",
   "repository": "segmentio/analytics-node",

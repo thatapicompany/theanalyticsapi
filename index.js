@@ -107,7 +107,7 @@ class TheAnalyticsAPI {
     }, message._metadata)
 
     if (!message.timestamp) {
-      message.timestamp = new Date()
+      message.timestamp = new Date().getTime();
     }
 
     if (!message.messageId) {
