@@ -1,8 +1,14 @@
-# theanalyticsapi
+# TheAnalyticsApi
+Node / NPM client library for TheAnalyticsAPI.com
 
-Node / NPM client library for theAnalyticsAPI.com
+Easy to integrate Analytics, 
 
+- Easily track events from your Node application
+- Download the Aggregate totals & Insights
+- Have the results pushed into your Datalake or anywhere else via Zapier or Slack with Webhooks
 
-## Roadmap
+Currently in closed Alpha.
 
-https://trello.com/c/89PTQi4C/19-npm-client-library-prototype
+# For early access contact
+
+Aden@ThatApiCompany.com
