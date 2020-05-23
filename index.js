@@ -187,7 +187,7 @@ class TheAnalyticsAPI {
 
     const req = {
       method: 'POST',
-      url: `${this.host}/api/track`,
+      url: `${this.host}/api/track/batch`,
       /* auth: {
         username: this.writeKey
       }, */
