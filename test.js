@@ -35,7 +35,7 @@ const createClient = options => {
 test.before.cb(t => {
   express()
     .use(bodyParser.json())
-    .post('/api/track/events', (req, res) => {
+    .post('/api/track', (req, res) => {
       const batch = req.body.batch
 
       const { name: writeKey } = auth(req)

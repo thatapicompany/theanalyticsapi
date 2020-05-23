@@ -9,6 +9,20 @@ Easy to integrate Analytics,
 
 Currently in closed Alpha.
 
+# Track an Event from your App
+
+Basic example:
+```javascript
+const Analytics = require('@thatapicompany/theanalyticsapi');
+
+const client = new Analytics('writeApiKey');
+
+client.track({
+  event: 'Signup'
+});
+```
+n.b. Timestamp would be automatically added on the server.
+
 # For early access contact
 
 Aden@ThatApiCompany.com
