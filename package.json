@@ -28,7 +28,8 @@
     "index.js"
   ],
   "keywords": [
-    "analytics"
+    "analytics",
+    "the analytics api"
   ],
   "dependencies": {
     "@segment/loosely-validate-event": "^2.0.0",

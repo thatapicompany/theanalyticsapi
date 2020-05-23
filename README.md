@@ -13,7 +13,7 @@ Currently in closed Alpha.
 
 Basic example:
 ```javascript
-const Analytics = require('@thatapicompany/theanalyticsapi');
+const Analytics = require('@ThatApiCompany/TheAnalyticsApi');
 
 const client = new Analytics('writeApiKey');
 
