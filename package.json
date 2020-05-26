@@ -1,10 +1,13 @@
 {
-  "name": "@thatapicompany/theanalyticsapi",
-  "version": "1.0.4",
+  "name": "theanalyticsapi",
+  "version": "1.0.5",
   "description": "The hassle-free way to integrate analytics into any Node.js application",
   "license": "MIT",
-  "repository": "segmentio/analytics-node",
+  "repository": "thatapicompany/theanalyticsapi",
   "author": {
+    "name": "ThatApiCompany",
+    "email": "aden@thatapicompany.com",
+    "url": "https://theAnalyticsApi.com"
   },
   "engines": {
     "node": ">=4"
@@ -29,7 +32,8 @@
   ],
   "keywords": [
     "analytics",
-    "the analytics api"
+    "theanalyticsapi",
+    "thatapicompany"
   ],
   "dependencies": {
     "@segment/loosely-validate-event": "^2.0.0",
