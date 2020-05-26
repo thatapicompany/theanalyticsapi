@@ -1,4 +1,9 @@
 
+v1.0.6 / 2020-05-23
+==========================
+
+  * Fixed case issue with example code. Added Typescript basic example.
+
 v1.0.4 / 2020-05-23
 ==========================
 

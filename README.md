@@ -12,8 +12,9 @@ Currently in closed Alpha.
 # Track an Event from your App
 
 Basic example:
+
 ```javascript
-const Analytics = require('@ThatApiCompany/TheAnalyticsApi');
+const Analytics = require('@thatapicompany/theanalyticsapi');
 
 const client = new Analytics('writeApiKey');
 
@@ -22,6 +23,18 @@ client.track({
 });
 ```
 n.b. Timestamp would be automatically added on the server.
+
+Typescript / Babel:
+
+```javascript
+import Analytics  from '@thatapicompany/theanalyticsapi';
+
+const client = new Analytics('writeApiKey');
+
+client.track({
+  event: 'Signup'
+});
+```
 
 # For early access contact
 
