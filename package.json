@@ -1,5 +1,5 @@
 {
-  "name": "theanalyticsapi",
+  "name": "@thatapicompany/theanalyticsapi",
   "version": "1.0.5",
   "description": "The hassle-free way to integrate analytics into any Node.js application",
   "license": "MIT",
