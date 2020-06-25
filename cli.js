@@ -43,10 +43,10 @@ const integrations = program.integrations
 
 const event = program.event
 const properties = program.properties
-const name = program.name
+/* const name = program.name
 const traits = program.traits
 const groupId = program.groupId
-const previousId = program.previousId
+const previousId = program.previousId */
 
 const run = (method, args) => {
   const analytics = new Analytics(writeKey, { host, flushAt: 1 })

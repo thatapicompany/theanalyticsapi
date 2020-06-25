@@ -107,7 +107,7 @@ class TheAnalyticsAPI {
     }, message._metadata)
 
     if (!message.timestamp) {
-      message.timestamp = new Date().getTime();
+      message.timestamp = new Date().getTime()
     }
 
     if (!message.messageId) {
@@ -148,6 +148,69 @@ class TheAnalyticsAPI {
    * @param {Function} [callback] (optional)
    * @return {Analytics}
    */
+
+  async asyncFlush (callback) {
+    callback = callback || noop
+
+    if (!this.enable) {
+      return setImmediate(callback)
+    }
+
+    if (this.timer) {
+      clearTimeout(this.timer)
+      this.timer = null
+    }
+
+    if (!this.queue.length) {
+      return setImmediate(callback)
+    }
+
+    const items = this.queue.splice(0, this.flushAt)
+    const callbacks = items.map(item => item.callback)
+    const messages = items.map(item => item.message)
+
+    const data = {
+      batch: messages,
+      timestamp: new Date().getTime(),
+      sentAt: new Date().getTime()
+    }
+
+    const done = err => {
+      callbacks.forEach(callback => callback(err))
+      callback(err, data)
+    }
+
+    const headers = {}
+
+    headers['user-agent'] = `theanalyticsapi-client-node/${version}`
+    headers['api_key'] = this.writeKey
+
+    const req = {
+      method: 'POST',
+      url: `${this.host}/api/track/batch`,
+      /* auth: {
+        username: this.writeKey
+      }, */
+      data,
+      headers
+    }
+
+    if (this.timeout) {
+      req.timeout = typeof this.timeout === 'string' ? ms(this.timeout) : this.timeout
+    }
+
+    try {
+      await axios(req)
+      done()
+    } catch (err) {
+      if (err.response) {
+        const error = new Error(err.response.statusText)
+        return done(error)
+      }
+
+      done(err)
+    }
+  }
 
   flush (callback) {
     callback = callback || noop
